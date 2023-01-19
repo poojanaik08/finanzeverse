@@ -1,0 +1,24 @@
+cookie:
+  expiry_days: 30
+  key: sales_dashboard
+  name: abcdef
+credentials:
+  usernames:
+    adk1410:
+      email: adk1410@gmail.com
+      name: Atharv Khanvilkar
+      password: $2b$12$WQ/z2YN7qvjXdLgPHUnBbeFFTBvnDy4UXJuzJnpZrPFgFRz.WzLnW
+    admin:
+      email: finanzeverse@gmail.com
+      name: Admin
+      password: $2b$12$qk4Z7Y6ReVetvIyZ5T/em.K2fQIrure4Lj38aSpIp6thjiLwf26ey
+    poojanaik:
+      email: poojanaik21@gmail.com
+      name: Pooja Naik
+      password: $2b$12$Zgw8uuEdO3fY2DQvnzMnZeimtGwALIh/vVJMBB/4Hfe5xzc6h3uZm
+    tanvikurhade:
+      email: tanvikurhade@gmail.com
+      name: Tanvi Kurhade
+      password: $2b$12$iSTCUR8YrKiQ/Ik2I7KS/.LWKaS0a7j04PumKR2ismByT3QJUoJoi
+preauthorized:
+  emails: []
