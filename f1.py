@@ -1,8 +1,6 @@
 import calendar
 from datetime import datetime
 import streamlit as st
-from streamlit_option_menu import option_menu
-import plotly.graph_objects as go
 
 #----------------SETTINGS-------------------
 def f1():
