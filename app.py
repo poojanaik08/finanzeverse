@@ -40,7 +40,7 @@ def main():
         {'label':"Signup"},
         {'label':"About"},
     ]
-    over_theme = {'txc_inactive': 'white','menu_background':'purple','txc_active':'white','option_active':'blue'}
+    over_theme = {'txc_inactive': 'white','menu_background':'purple','txc_active':'white','option_active':'black'}
 
     menu_id = hc.nav_bar(
         menu_definition=menu_data,

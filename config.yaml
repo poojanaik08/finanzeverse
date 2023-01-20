@@ -17,8 +17,8 @@ credentials:
       name: Pooja Naik
       password: $2b$12$Zgw8uuEdO3fY2DQvnzMnZeimtGwALIh/vVJMBB/4Hfe5xzc6h3uZm
     tanvikurhade:
-      email: tanvikurhade@gmail.com
-      name: Tanvi Kurhade
-      password: $2b$12$iSTCUR8YrKiQ/Ik2I7KS/.LWKaS0a7j04PumKR2ismByT3QJUoJoi
+      email: tanvikurhade811@gmail.com
+      name: Tanvi
+      password: $2b$12$HocW0DKHGoj1BtikegFHh.3ORe1/NsSz28VOsXqGoBr2b85Z/vMNW
 preauthorized:
   emails: []
