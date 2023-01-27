@@ -84,7 +84,7 @@ def main():
             st.markdown(text, unsafe_allow_html=True)
             new_title = '<p style="font-family:Poppins; color:White; font-size: 28px; letter-spacing: 0.12em;text-align:center; top: 1000px;left: 363px;">We offer you access to a wide range of services<br> that have been thoughtfully developed<br> to be intuitive, engaging and easy to use.</p>'
             st.markdown(new_title, unsafe_allow_html=True) 
-            new_title = '<p style="font-family:Roboto; color:White; font-size: 18px; letter-spacing: 0.1em;text-align: center; text-shadow: -1.5px 6px 4px rgba(0, 0, 0, 0.2);"><br><br>☑ DASHBOARD &emsp;☑ LOAN MANAGER &emsp;☑ BUDGET MANAGER</p>'
+            new_title = '<p style="font-family:Roboto; color:White; font-size: 18px; letter-spacing: 0.1em;text-align: center; text-shadow: -1.5px 6px 4px rgba(0, 0, 0, 0.2);"><br><br>☑ DASHBOARD &emsp;☑ LOAN PLANNER &emsp;☑ BUDGET PLANNER</p>'
             st.markdown(new_title, unsafe_allow_html=True)
 
         with col2:
@@ -116,7 +116,7 @@ def main():
         with col1:
             text='<p><br><br><br></>'
             st.markdown(text, unsafe_allow_html=True)
-            new_title = '<p style="font-family:Poppins; color:White; font-size: 28px; letter-spacing: 0.12em;text-align:center; top: 1000px;left: 363px;">Option of Loan Manager to manage <br>other KPIs according to EMI.</p>'
+            new_title = '<p style="font-family:Poppins; color:White; font-size: 28px; letter-spacing: 0.12em;text-align:center; top: 1000px;left: 363px;">Option of Loan Planner to manage <br>other KPIs according to EMI.</p>'
             st.markdown(new_title, unsafe_allow_html=True) 
             new_title = '<p style="font-family:Roboto; color:White; font-size: 28px; letter-spacing: 0.1em;text-align: center;top: 1000px;left: 363px;">Get an EMI plan for after filling the details <br>form of your loan.</p>'
             st.markdown(new_title, unsafe_allow_html=True)
