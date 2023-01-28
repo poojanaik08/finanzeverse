@@ -4,7 +4,7 @@ import yaml
 from yaml.loader import SafeLoader
 from PIL import Image
 
-from f1 import f1
+from upload import upload
 
 def login():
     image = Image.open("images/loginimg.png")
@@ -26,8 +26,7 @@ def login():
             st.title("Admin Page")
             st.text("You now have admin rights")
         else:
-            #sample()
-            f1()
+            upload()
     elif authentication_status == False:
         st.error('Username/password is incorrect')
     elif authentication_status == None:
