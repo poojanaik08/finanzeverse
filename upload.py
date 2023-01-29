@@ -41,6 +41,8 @@ def upload():
             total_expense = int(total_expense)
             total_savings = int(total_savings)
 
+            
+            
             subcol1, subcol2, subcol3 = st.columns(3)
             with subcol1:
                 st.metric("Total Income", f"{total_income}")
@@ -49,7 +51,7 @@ def upload():
             with subcol3:
                 st.metric("Total Savings", f"{total_savings}")
             
-            st.markdown("###")
+            
             expense_per = total_expense/total_income
             saving_per = total_savings/total_income
             expense_per = expense_per*100
@@ -64,7 +66,7 @@ def upload():
 
             st.markdown("###")
             st.subheader("How do I spend?")
-            years = st.multiselect("Select Years: ", options=st.session_state.expense_df["Year"].unique(), default=st.session_state.expense_df["Year"].unique())
+            years = st.multiselect("Select Years: ", options=st.session_state.expense_df["Year"].unique(), default=st.session_state.expense_df["Year"].unique(),key="expense_key")
             expense_df_selection = st.session_state.expense_df.query(
                 "Year == @years"
             )
@@ -83,6 +85,36 @@ def upload():
                 template='plotly_white', 
                 hover_data= ["Value"],
                 hover_name="Value",
+                height=350,
+                color=pt.index,
+            )
+            fig.update_layout(
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)'
+            )
+            st.plotly_chart(fig)
+
+            st.subheader("How do I save?")
+            years1 = st.multiselect("Select Years: ", options=st.session_state.income_df["Year"].unique(), default=st.session_state.income_df["Year"].unique(),key="income_key")
+            income_df_selection = st.session_state.income_df.query(
+                "Year == @years1"
+            )
+            pt = income_df_selection.pivot_table(
+                values="Value",
+                index="Component",
+                aggfunc="sum",
+                fill_value=0
+            )
+            pt.reset_index().sort_values("Value", ascending=True)
+
+            fig = px.bar(
+                pt,
+                y= pt.index,
+                x="Value",
+                template='plotly_white', 
+                hover_data= ["Value"],
+                hover_name="Value",
+                height=350,
                 color=pt.index,
             )
             fig.update_layout(
@@ -108,6 +140,8 @@ def upload():
                 y = "Value",
                 x = "Date",
                 hover_data=["Value"],
+                height=600,
+                width= 800,
                 color="Component",
             )
             fig2.add_scatter(
