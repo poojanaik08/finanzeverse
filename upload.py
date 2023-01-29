@@ -4,6 +4,8 @@ import pandas as pd
 import plotly.graph_objects as go
 
 def upload():
+    with open('style/upload.css') as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     menu = ["File Upload","Dashboard", "Loan Planner", "Budget Planner"]
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "File Upload":
@@ -15,17 +17,50 @@ def upload():
             savings_df = df.loc[df["Type"]=="Savings"]
             if 'df' not in st.session_state:
                 st.session_state.df = df
+
             if 'expense_df' not in st.session_state:
                 st.session_state.expense_df = expense_df
+
             if 'income_df' not in st.session_state:
                 st.session_state.income_df = income_df
+
             if 'savings_df' not in st.session_state:
                 st.session_state.savings_df = savings_df
 
     if choice == "Dashboard":
         col1, col2 = st.columns(2, gap="large")
         with col1:
+            total_income = st.session_state.income_df["Value"].sum()
+            total_expense = st.session_state.expense_df["Value"].sum()
+            total_savings = total_income - total_expense
+            expense_per = total_expense/total_income
+            saving_per = total_savings/total_income
+
             st.subheader("Metrics")
+            total_income = int(total_income)
+            total_expense = int(total_expense)
+            total_savings = int(total_savings)
+
+            subcol1, subcol2, subcol3 = st.columns(3)
+            with subcol1:
+                st.metric("Total Income", f"{total_income}")
+            with subcol2:
+                st.metric("Total Expenditure", f"{total_expense}")
+            with subcol3:
+                st.metric("Total Savings", f"{total_savings}")
+            
+            st.markdown("###")
+            expense_per = total_expense/total_income
+            saving_per = total_savings/total_income
+            expense_per = expense_per*100
+            expense_per = round(expense_per, 2)
+            saving_per = saving_per*100
+            saving_per = round(saving_per, 2)
+            sub2col1, sub2col2 = st.columns(2)
+            with sub2col1:
+                st.metric("Expense Percent", f"{expense_per}%")
+            with sub2col2:
+                st.metric("Savings Percent", f"{saving_per}%")
 
             st.markdown("###")
             st.subheader("How do I spend?")
@@ -58,6 +93,7 @@ def upload():
         
         with col2:
             #line charts
+            st.subheader("Income and Expense")
             component = st.selectbox(label="Select Income Category", options=st.session_state.income_df["Component"].unique())
             line_income_df_selection = st.session_state.income_df.query(
                 "Component == @component"
