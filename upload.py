@@ -2,9 +2,6 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
-from PIL import Image
-
-image = Image.open("images/finance_template.png")
 
 def upload():
     with open('style/upload.css') as f:
@@ -48,7 +45,8 @@ def upload():
         with col1:
             total_income = st.session_state.income_df["Value"].sum()
             total_expense = st.session_state.expense_df["Value"].sum()
-            total_savings = total_income - total_expense
+            #total_savings = total_income - total_expense
+            total_savings = st.session_state.savings_df["Value"].sum()
             expense_per = total_expense/total_income
             saving_per = total_savings/total_income
 
