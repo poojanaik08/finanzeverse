@@ -16,7 +16,16 @@ def upload():
         #template
         st.markdown("###")
         with st.expander(label="CSV Template"):
-            st.image(image=image, width=1000)
+            #st.image(image=image, width=1000)
+            csv_template = pd.DataFrame(
+            data={"Type":["Income","Income", "Expenses", "Expenses", "Savings"],
+            "Component": ["Income1", "Income2", "Expense1", "Expense2", "Savings1"],
+            "Date":["01/01/2021", "10/08/2022", "21/03/2022", "19/05/2022", "01/02/2023"],
+            "Value": [30000, 25000, 4000, 15000, 10000],
+            "Year": [2021, 2022, 2022, 2022, 2023]
+            })
+            st.table(data=csv_template)
+
         if data_file is not None:
             df = pd.read_csv(data_file, index_col=False, encoding= 'utf-8-sig')
             expense_df = df.loc[df["Type"]=="Expenses"]
@@ -147,7 +156,7 @@ def upload():
                 x = "Date",
                 hover_data=["Value"],
                 height=600,
-                width= 720,
+                width= 690,
                 color="Component",
             )
             fig2.add_scatter(
@@ -172,6 +181,7 @@ def upload():
             hole=0.5,
             labels = "Component",
             names= "Component",
+            width=685
             )
             fig3.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
