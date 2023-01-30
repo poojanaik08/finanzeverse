@@ -2,6 +2,9 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
+from PIL import Image
+
+image = Image.open("images/finance_template.png")
 
 def upload():
     with open('style/upload.css') as f:
@@ -10,6 +13,10 @@ def upload():
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "File Upload":
         data_file = st.file_uploader("Upload CSV", type=['csv'])
+        #template
+        st.markdown("###")
+        with st.expander(label="CSV Template"):
+            st.image(image=image, width=1000)
         if data_file is not None:
             df = pd.read_csv(data_file, index_col=False, encoding= 'utf-8-sig')
             expense_df = df.loc[df["Type"]=="Expenses"]
@@ -40,8 +47,6 @@ def upload():
             total_income = int(total_income)
             total_expense = int(total_expense)
             total_savings = int(total_savings)
-
-            
             
             subcol1, subcol2, subcol3 = st.columns(3)
             with subcol1:
