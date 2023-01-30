@@ -141,7 +141,7 @@ def upload():
                 x = "Date",
                 hover_data=["Value"],
                 height=600,
-                width= 800,
+                width= 720,
                 color="Component",
             )
             fig2.add_scatter(
