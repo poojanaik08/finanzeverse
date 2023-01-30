@@ -99,34 +99,35 @@ def upload():
             )
             st.plotly_chart(fig)
 
-            st.subheader("How do I save?")
+            st.subheader("How do I earn?")
             years1 = st.multiselect("Select Years: ", options=st.session_state.income_df["Year"].unique(), default=st.session_state.income_df["Year"].unique(),key="income_key")
             income_df_selection = st.session_state.income_df.query(
                 "Year == @years1"
             )
-            pt = income_df_selection.pivot_table(
+            pt2 = income_df_selection.pivot_table(
                 values="Value",
                 index="Component",
                 aggfunc="sum",
                 fill_value=0
             )
-            pt.reset_index().sort_values("Value", ascending=True)
+            pt2.reset_index().sort_values("Value", ascending=True)
 
-            fig = px.bar(
-                pt,
-                y= pt.index,
+            fig4 = px.bar(
+                pt2,
+                y= pt2.index,
                 x="Value",
                 template='plotly_white', 
                 hover_data= ["Value"],
                 hover_name="Value",
                 height=350,
-                color=pt.index,
+                color=pt2.index,
             )
-            fig.update_layout(
+            fig4.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)'
             )
-            st.plotly_chart(fig)
+            st.plotly_chart(fig4)
+
         
         with col2:
             #line charts
