@@ -197,9 +197,9 @@ def upload():
 
         col1, col2, col3 = st.columns(3)
         with col1:
-            principal = st.number_input('Principal amount', min_value=0, value=100000, step=1)
+            principal = st.number_input('Principal Amount',min_value=0, value=100000, step=1)
         with col2:
-            interes_rate = st.number_input('Interest rate', min_value=0.000, value=0.050, step=0.001)
+            interes_rate = st.number_input('Interest Rate', min_value=0.000, value=0.050, step=0.001)
         with col3:
             term = st.number_input('Term (in months)', min_value=0, value=120, step=1)
 
@@ -234,9 +234,9 @@ def upload():
         data['Interest Monthly Ratio'] = data['Interest Amount'] / data['Monthly Payment']
 
         # create a line graph with x axis as month and y axis as remaining principal
-        fig_remining_principal = px.line(data, x='Month', y='Remaining Principal', template='plotly', width=1000)
-        fig_interest_payed = px.line(data, x='Month', y=['Interest Amount', 'Monthly Payment'], template='plotly', width=1000)
-        fig_interest_payment_ratio = px.line(data, x='Month', y='Interest Monthly Ratio', template='plotly', width=1000)
+        fig_remining_principal = px.line(data, x='Month', y='Remaining Principal')
+        fig_interest_payed = px.line(data, x='Month', y=['Interest Amount', 'Monthly Payment'], width=900)
+        fig_interest_payment_ratio = px.line(data, x='Month', y='Interest Monthly Ratio')
 
         fig_remining_principal.update_layout(
             paper_bgcolor='rgba(0,0,0,0)',
@@ -262,8 +262,6 @@ def upload():
         
         fig_interest_payment_ratio.for_each_xaxis(lambda x: x.update(showgrid=False))
         fig_interest_payment_ratio.for_each_yaxis(lambda x: x.update(showgrid=False))
-        
-        
 
         month_pay = round(data['Monthly Payment'][0])
         tot_amount = round(total_amount)
@@ -274,22 +272,20 @@ def upload():
         if show_brake_down:
             st.markdown('## Loan breakdown per month')
             st.dataframe(data, width=1500)
-            # styler = data.style.hide_index().format(subset=['mean'], decimal=',', precision=2).bar(subset=['mean'], align="mid")
-            # st.write(styler.to_html(), unsafe_allow_html=True)
             # create download button with streamlit, donload the data frame as csv file
             st.download_button(label='Download data', data=data.to_csv(index=False), file_name='loan_breakdown.csv',
                             mime='text/csv')
+ 
+        figcol1, figcol2 = st.columns(2)
+        with figcol1:
+            st.markdown('## Remaining principal over time')
+            st.plotly_chart(fig_remining_principal, theme=None)
+        with figcol2:
+            st.markdown('## Monthly payment instalment over time')
+            st.plotly_chart(fig_interest_payment_ratio, theme=None)
 
-       
-        st.markdown('## Remaining principal over time')
-        st.plotly_chart(fig_remining_principal, theme=None)
-
-        
         st.markdown('## Monyhly installment breakdown per month over time')
-        st.plotly_chart(fig_interest_payed, theme=None)
+        st.plotly_chart(fig_interest_payed, theme=None, use_container_width=True)
 
-        
-        st.markdown('## Interest / monthly payment instalment over time')
-        st.plotly_chart(fig_interest_payment_ratio, theme=None)
 
 
