@@ -4,8 +4,8 @@ import pandas as pd
 import plotly.graph_objects as go
 
 def upload():
-    with open('style/upload.css') as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    # with open('style/upload.css') as f:
+    #     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     menu = ["File Upload","Dashboard", "Loan Planner", "Budget Planner"]
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "File Upload":
@@ -41,6 +41,8 @@ def upload():
                 st.session_state.savings_df = savings_df
 
     if choice == "Dashboard":
+        with open('style/upload.css') as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
         col1, col2 = st.columns(2, gap="large")
         with col1:
             total_income = st.session_state.income_df["Value"].sum()
@@ -222,39 +224,71 @@ def upload():
             total_amount = total_amount + monthly_payment
             # Print the result
             data_one_iter = pd.DataFrame({
-                'month': [month],
-                'monthly_payment': [monthly_payment],
-                'interest_amount': [interest_amount],
-                'remaining_principal': [remaining_principal],
-                'total_amount': [total_amount]})
+                'Month': [month],
+                'Monthly Payment': [monthly_payment],
+                'Interest Amount': [interest_amount],
+                'Remaining Principal': [remaining_principal],
+                'Total Amount': [total_amount]})
+            
             data = pd.concat([data, data_one_iter], ignore_index=True)
-        data['interest_monthly_ratio'] = data['interest_amount'] / data['monthly_payment']
+        data['Interest Monthly Ratio'] = data['Interest Amount'] / data['Monthly Payment']
 
         # create a line graph with x axis as month and y axis as remaining principal
-        fig_remining_principal = px.line(data, x='month', y='remaining_principal', template='plotly')
-        fig_interest_payed = px.line(data, x='month', y=['interest_amount', 'monthly_payment'], template='plotly')
-        fig_interest_payment_ratio = px.line(data, x='month', y='interest_monthly_ratio', template='plotly')
+        fig_remining_principal = px.line(data, x='Month', y='Remaining Principal', template='plotly', width=1000)
+        fig_interest_payed = px.line(data, x='Month', y=['Interest Amount', 'Monthly Payment'], template='plotly', width=1000)
+        fig_interest_payment_ratio = px.line(data, x='Month', y='Interest Monthly Ratio', template='plotly', width=1000)
 
-        month_pay = round(data['monthly_payment'][0])
+        fig_remining_principal.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',   
+        )
+        
+        fig_interest_payed .update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)', 
+            yaxis_title="Value",
+        )
+        
+        fig_interest_payment_ratio.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',   
+        )
+        
+        fig_remining_principal.for_each_xaxis(lambda x: x.update(showgrid=False))
+        fig_remining_principal.for_each_yaxis(lambda x: x.update(showgrid=False))
+        
+        fig_interest_payed.for_each_xaxis(lambda x: x.update(showgrid=False))
+        fig_interest_payed.for_each_yaxis(lambda x: x.update(showgrid=False))
+        
+        fig_interest_payment_ratio.for_each_xaxis(lambda x: x.update(showgrid=False))
+        fig_interest_payment_ratio.for_each_yaxis(lambda x: x.update(showgrid=False))
+        
+        
+
+        month_pay = round(data['Monthly Payment'][0])
         tot_amount = round(total_amount)
-        st.subheader(f'Monthly installment: {month_pay}')
+        st.subheader(f'Monthly Installment: {month_pay}')
         st.subheader(f'Total amount payed at the end of the loan period: {tot_amount}')
 
         show_brake_down = st.checkbox('Show loan breakdown per month')
         if show_brake_down:
             st.markdown('## Loan breakdown per month')
-            st.dataframe(data)
+            st.dataframe(data, width=1500)
+            # styler = data.style.hide_index().format(subset=['mean'], decimal=',', precision=2).bar(subset=['mean'], align="mid")
+            # st.write(styler.to_html(), unsafe_allow_html=True)
             # create download button with streamlit, donload the data frame as csv file
             st.download_button(label='Download data', data=data.to_csv(index=False), file_name='loan_breakdown.csv',
                             mime='text/csv')
 
-
+       
         st.markdown('## Remaining principal over time')
         st.plotly_chart(fig_remining_principal, theme=None)
 
+        
         st.markdown('## Monyhly installment breakdown per month over time')
         st.plotly_chart(fig_interest_payed, theme=None)
 
+        
         st.markdown('## Interest / monthly payment instalment over time')
         st.plotly_chart(fig_interest_payment_ratio, theme=None)
 
