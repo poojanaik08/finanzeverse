@@ -1,0 +1,595 @@
+Type,Component,Date,Value,Year
+Income,Salary,01-01-2018,35000,2018
+Income,Salary,01-02-2018,35000,2018
+Income,Salary,01-03-2018,35000,2018
+Income,Salary,01-04-2018,35000,2018
+Income,Salary,01-05-2018,35000,2018
+Income,Salary,01-06-2018,35000,2018
+Income,Salary,01-07-2018,35000,2018
+Income,Salary,01-08-2018,35000,2018
+Income,Salary,01-09-2018,35000,2018
+Income,Salary,01-10-2018,35000,2018
+Income,Salary,01-11-2018,35000,2018
+Income,Salary,01-12-2018,35000,2018
+Income,Salary,01-01-2019,50000,2019
+Income,Salary,01-02-2019,50000,2019
+Income,Salary,01-03-2019,50000,2019
+Income,Salary,01-04-2019,50000,2019
+Income,Salary,01-05-2019,50000,2019
+Income,Salary,01-06-2019,50000,2019
+Income,Salary,01-07-2019,50000,2019
+Income,Salary,01-08-2019,50000,2019
+Income,Salary,01-09-2019,50000,2019
+Income,Salary,01-10-2019,50000,2019
+Income,Salary,01-11-2019,50000,2019
+Income,Salary,01-12-2019,50000,2019
+Income,Salary,01-01-2020,50000,2020
+Income,Salary,01-02-2020,50000,2020
+Income,Salary,01-03-2020,50000,2020
+Income,Salary,01-04-2020,50000,2020
+Income,Salary,01-05-2020,50000,2020
+Income,Salary,01-06-2020,50000,2020
+Income,Salary,01-07-2020,50000,2020
+Income,Salary,01-08-2020,50000,2020
+Income,Salary,01-09-2020,50000,2020
+Income,Salary,01-10-2020,50000,2020
+Income,Salary,01-11-2020,50000,2020
+Income,Salary,01-12-2020,50000,2020
+Income,Salary,01-01-2021,55000,2021
+Income,Salary,01-02-2021,55000,2021
+Income,Salary,01-03-2021,55000,2021
+Income,Salary,01-04-2021,55000,2021
+Income,Salary,01-05-2021,55000,2021
+Income,Salary,01-06-2021,55000,2021
+Income,Salary,01-07-2021,55000,2021
+Income,Salary,01-08-2021,55000,2021
+Income,Salary,01-09-2021,55000,2021
+Income,Salary,01-10-2021,55000,2021
+Income,Salary,01-11-2021,55000,2021
+Income,Salary,01-12-2021,55000,2021
+Income,Salary,01-01-2022,60000,2022
+Income,Salary,01-02-2022,60000,2022
+Income,Salary,01-03-2022,60000,2022
+Income,Salary,01-04-2022,60000,2022
+Income,Salary,01-05-2022,60000,2022
+Income,Salary,01-06-2022,60000,2022
+Income,Salary,01-07-2022,60000,2022
+Income,Salary,01-08-2022,60000,2022
+Income,Salary,01-09-2022,60000,2022
+Income,Salary,01-10-2022,60000,2022
+Income,Salary,01-11-2022,60000,2022
+Income,Salary,01-12-2022,60000,2022
+Income,Salary,01-01-2023,60000,2023
+Income,Salary,01-02-2023,60000,2023
+Income,Salary,01-03-2023,60000,2023
+Income,Dividend,01-01-2018,3000,2018
+Income,Dividend,01-02-2018,3000,2018
+Income,Dividend,01-03-2018,3000,2018
+Income,Dividend,01-04-2018,3000,2018
+Income,Dividend,01-05-2018,3000,2018
+Income,Dividend,01-06-2018,3000,2018
+Income,Dividend,01-07-2018,3000,2018
+Income,Dividend,01-08-2018,3000,2018
+Income,Dividend,01-09-2018,3000,2018
+Income,Dividend,01-10-2018,3000,2018
+Income,Dividend,01-11-2018,3000,2018
+Income,Dividend,01-12-2018,3000,2018
+Income,Dividend,01-01-2019,3500,2019
+Income,Dividend,01-02-2019,3500,2019
+Income,Dividend,01-03-2019,3500,2019
+Income,Dividend,01-04-2019,3500,2019
+Income,Dividend,01-05-2019,3500,2019
+Income,Dividend,01-06-2019,3500,2019
+Income,Dividend,01-07-2019,3500,2019
+Income,Dividend,01-08-2019,3500,2019
+Income,Dividend,01-09-2019,3500,2019
+Income,Dividend,01-10-2019,3500,2019
+Income,Dividend,01-11-2019,3500,2019
+Income,Dividend,01-12-2019,3500,2019
+Income,Dividend,01-01-2020,4000,2020
+Income,Dividend,01-02-2020,4000,2020
+Income,Dividend,01-03-2020,4000,2020
+Income,Dividend,01-04-2020,4000,2020
+Income,Dividend,01-05-2020,4000,2020
+Income,Dividend,01-06-2020,4000,2020
+Income,Dividend,01-07-2020,4000,2020
+Income,Dividend,01-08-2020,4000,2020
+Income,Dividend,01-09-2020,4000,2020
+Income,Dividend,01-10-2020,4000,2020
+Income,Dividend,01-11-2020,4000,2020
+Income,Dividend,01-12-2020,4000,2020
+Income,Dividend,01-01-2021,4500,2021
+Income,Dividend,01-02-2021,4500,2021
+Income,Dividend,01-03-2021,4500,2021
+Income,Dividend,01-04-2021,4500,2021
+Income,Dividend,01-05-2021,4500,2021
+Income,Dividend,01-06-2021,4500,2021
+Income,Dividend,01-07-2021,4500,2021
+Income,Dividend,01-08-2021,4500,2021
+Income,Dividend,01-09-2021,4500,2021
+Income,Dividend,01-10-2021,4500,2021
+Income,Dividend,01-11-2021,4500,2021
+Income,Dividend,01-12-2021,4500,2021
+Income,Dividend,01-01-2022,4000,2022
+Income,Dividend,01-02-2022,4000,2022
+Income,Dividend,01-03-2022,4000,2022
+Income,Dividend,01-04-2022,4000,2022
+Income,Dividend,01-05-2022,4000,2022
+Income,Dividend,01-06-2022,4000,2022
+Income,Dividend,01-07-2022,4000,2022
+Income,Dividend,01-08-2022,4000,2022
+Income,Dividend,01-09-2022,4000,2022
+Income,Dividend,01-10-2022,4000,2022
+Income,Dividend,01-11-2022,4000,2022
+Income,Dividend,01-12-2022,4000,2022
+Income,Dividend,01-01-2023,4800,2023
+Income,Dividend,01-02-2023,4800,2023
+Income,Dividend,01-03-2023,4800,2023
+Income,Mutual Funds,01-01-2018,10000,2018
+Income,Mutual Funds,01-02-2018,10000,2018
+Income,Mutual Funds,01-03-2018,10000,2018
+Income,Mutual Funds,01-04-2018,10000,2018
+Income,Mutual Funds,01-05-2018,10000,2018
+Income,Mutual Funds,01-06-2018,10000,2018
+Income,Mutual Funds,01-07-2018,10000,2018
+Income,Mutual Funds,01-08-2018,10000,2018
+Income,Mutual Funds,01-09-2018,10000,2018
+Income,Mutual Funds,01-10-2018,10000,2018
+Income,Mutual Funds,01-11-2018,10000,2018
+Income,Mutual Funds,01-12-2018,10000,2018
+Income,Mutual Funds,01-01-2019,13000,2019
+Income,Mutual Funds,01-02-2019,13000,2019
+Income,Mutual Funds,01-03-2019,13000,2019
+Income,Mutual Funds,01-04-2019,13000,2019
+Income,Mutual Funds,01-05-2019,13000,2019
+Income,Mutual Funds,01-06-2019,13000,2019
+Income,Mutual Funds,01-07-2019,13000,2019
+Income,Mutual Funds,01-08-2019,13000,2019
+Income,Mutual Funds,01-09-2019,13000,2019
+Income,Mutual Funds,01-10-2019,13000,2019
+Income,Mutual Funds,01-11-2019,13000,2019
+Income,Mutual Funds,01-12-2019,13000,2019
+Income,Mutual Funds,01-01-2020,15000,2020
+Income,Mutual Funds,01-02-2020,15000,2020
+Income,Mutual Funds,01-03-2020,15000,2020
+Income,Mutual Funds,01-04-2020,15000,2020
+Income,Mutual Funds,01-05-2020,15000,2020
+Income,Mutual Funds,01-06-2020,15000,2020
+Income,Mutual Funds,01-07-2020,15000,2020
+Income,Mutual Funds,01-08-2020,15000,2020
+Income,Mutual Funds,01-09-2020,15000,2020
+Income,Mutual Funds,01-10-2020,15000,2020
+Income,Mutual Funds,01-11-2020,15000,2020
+Income,Mutual Funds,01-12-2020,15000,2020
+Income,Mutual Funds,01-01-2021,17000,2021
+Income,Mutual Funds,01-02-2021,17000,2021
+Income,Mutual Funds,01-03-2021,17000,2021
+Income,Mutual Funds,01-04-2021,17000,2021
+Income,Mutual Funds,01-05-2021,17000,2021
+Income,Mutual Funds,01-06-2021,17000,2021
+Income,Mutual Funds,01-07-2021,17000,2021
+Income,Mutual Funds,01-08-2021,17000,2021
+Income,Mutual Funds,01-09-2021,17000,2021
+Income,Mutual Funds,01-10-2021,17000,2021
+Income,Mutual Funds,01-11-2021,17000,2021
+Income,Mutual Funds,01-12-2021,17000,2021
+Income,Mutual Funds,01-01-2022,19000,2022
+Income,Mutual Funds,01-02-2022,19000,2022
+Income,Mutual Funds,01-03-2022,19000,2022
+Income,Mutual Funds,01-04-2022,19000,2022
+Income,Mutual Funds,01-05-2022,19000,2022
+Income,Mutual Funds,01-06-2022,19000,2022
+Income,Mutual Funds,01-07-2022,19000,2022
+Income,Mutual Funds,01-08-2022,19000,2022
+Income,Mutual Funds,01-09-2022,19000,2022
+Income,Mutual Funds,01-10-2022,19000,2022
+Income,Mutual Funds,01-11-2022,19000,2022
+Income,Mutual Funds,01-12-2022,19000,2022
+Income,Mutual Funds,01-01-2023,20000,2023
+Income,Mutual Funds,01-02-2023,20000,2023
+Income,Mutual Funds,01-03-2023,20000,2023
+Income,Rent,01-01-2018,21000,2018
+Income,Rent,01-02-2018,21000,2018
+Income,Rent,01-03-2018,21000,2018
+Income,Rent,01-04-2018,21000,2018
+Income,Rent,01-05-2018,21000,2018
+Income,Rent,01-06-2018,21000,2018
+Income,Rent,01-07-2018,21000,2018
+Income,Rent,01-08-2018,21000,2018
+Income,Rent,01-09-2018,21000,2018
+Income,Rent,01-10-2018,21000,2018
+Income,Rent,01-11-2018,21000,2018
+Income,Rent,01-12-2018,21000,2018
+Income,Rent,01-01-2019,25000,2019
+Income,Rent,01-02-2019,25000,2019
+Income,Rent,01-03-2019,25000,2019
+Income,Rent,01-04-2019,25000,2019
+Income,Rent,01-05-2019,25000,2019
+Income,Rent,01-06-2019,25000,2019
+Income,Rent,01-07-2019,25000,2019
+Income,Rent,01-08-2019,25000,2019
+Income,Rent,01-09-2019,25000,2019
+Income,Rent,01-10-2019,25000,2019
+Income,Rent,01-11-2019,25000,2019
+Income,Rent,01-12-2019,25000,2019
+Income,Rent,01-01-2020,25000,2020
+Income,Rent,01-02-2020,25000,2020
+Income,Rent,01-03-2020,25000,2020
+Income,Rent,01-04-2020,25000,2020
+Income,Rent,01-05-2020,25000,2020
+Income,Rent,01-06-2020,25000,2020
+Income,Rent,01-07-2020,25000,2020
+Income,Rent,01-08-2020,25000,2020
+Income,Rent,01-09-2020,25000,2020
+Income,Rent,01-10-2020,25000,2020
+Income,Rent,01-11-2020,25000,2020
+Income,Rent,01-12-2020,25000,2020
+Income,Rent,01-01-2021,26500,2021
+Income,Rent,01-02-2021,26500,2021
+Income,Rent,01-03-2021,26500,2021
+Income,Rent,01-04-2021,26500,2021
+Income,Rent,01-05-2021,26500,2021
+Income,Rent,01-06-2021,26500,2021
+Income,Rent,01-07-2021,26500,2021
+Income,Rent,01-08-2021,26500,2021
+Income,Rent,01-09-2021,26500,2021
+Income,Rent,01-10-2021,26500,2021
+Income,Rent,01-11-2021,26500,2021
+Income,Rent,01-12-2021,26500,2021
+Income,Rent,01-01-2022,26500,2022
+Income,Rent,01-02-2022,26500,2022
+Income,Rent,01-03-2022,26500,2022
+Income,Rent,01-04-2022,26500,2022
+Income,Rent,01-05-2022,26500,2022
+Income,Rent,01-06-2022,27000,2022
+Income,Rent,01-07-2022,27000,2022
+Income,Rent,01-08-2022,27000,2022
+Income,Rent,01-09-2022,27000,2022
+Income,Rent,01-10-2022,27000,2022
+Income,Rent,01-11-2022,27000,2022
+Income,Rent,01-12-2022,27000,2022
+Income,Rent,01-01-2023,27000,2023
+Income,Rent,01-02-2023,27000,2023
+Income,Rent,01-03-2023,27000,2023
+Expenses,EMI,01-01-2018,30000,2018
+Expenses,EMI,01-02-2018,30000,2018
+Expenses,EMI,01-03-2018,30000,2018
+Expenses,EMI,01-04-2018,30000,2018
+Expenses,EMI,01-05-2018,30000,2018
+Expenses,EMI,01-06-2018,30000,2018
+Expenses,EMI,01-07-2018,30000,2018
+Expenses,EMI,01-08-2018,30000,2018
+Expenses,EMI,01-09-2018,30000,2018
+Expenses,EMI,01-10-2018,30000,2018
+Expenses,EMI,01-11-2018,30000,2018
+Expenses,EMI,01-12-2018,30000,2018
+Expenses,EMI,01-01-2019,30000,2019
+Expenses,EMI,01-02-2019,30000,2019
+Expenses,EMI,01-03-2019,30000,2019
+Expenses,EMI,01-04-2019,30000,2019
+Expenses,EMI,01-05-2019,35000,2019
+Expenses,EMI,01-06-2019,35000,2019
+Expenses,EMI,01-07-2019,35000,2019
+Expenses,EMI,01-08-2019,35000,2019
+Expenses,EMI,01-09-2019,35000,2019
+Expenses,EMI,01-10-2019,35000,2019
+Expenses,EMI,01-11-2019,35000,2019
+Expenses,EMI,01-12-2019,35000,2019
+Expenses,EMI,01-01-2020,35000,2020
+Expenses,EMI,01-02-2020,35000,2020
+Expenses,EMI,01-03-2020,35000,2020
+Expenses,EMI,01-04-2020,35000,2020
+Expenses,EMI,01-05-2020,35000,2020
+Expenses,EMI,01-06-2020,35000,2020
+Expenses,EMI,01-07-2020,35000,2020
+Expenses,EMI,01-08-2020,35000,2020
+Expenses,EMI,01-09-2020,35000,2020
+Expenses,EMI,01-10-2020,35000,2020
+Expenses,EMI,01-11-2020,35000,2020
+Expenses,EMI,01-12-2020,35000,2020
+Expenses,EMI,01-01-2021,0,2021
+Expenses,EMI,01-02-2021,0,2021
+Expenses,EMI,01-03-2021,0,2021
+Expenses,EMI,01-04-2021,0,2021
+Expenses,EMI,01-05-2021,0,2021
+Expenses,EMI,01-06-2021,0,2021
+Expenses,EMI,01-07-2021,0,2021
+Expenses,EMI,01-08-2021,0,2021
+Expenses,EMI,01-09-2021,0,2021
+Expenses,EMI,01-10-2021,0,2021
+Expenses,EMI,01-11-2021,0,2021
+Expenses,EMI,01-12-2021,0,2021
+Expenses,EMI,01-01-2022,0,2022
+Expenses,EMI,01-02-2022,0,2022
+Expenses,EMI,01-03-2022,20000,2022
+Expenses,EMI,01-04-2022,20000,2022
+Expenses,EMI,01-05-2022,20000,2022
+Expenses,EMI,01-06-2022,20000,2022
+Expenses,EMI,01-07-2022,20000,2022
+Expenses,EMI,01-08-2022,20000,2022
+Expenses,EMI,01-09-2022,20000,2022
+Expenses,EMI,01-10-2022,20000,2022
+Expenses,EMI,01-11-2022,20000,2022
+Expenses,EMI,01-12-2022,20000,2022
+Expenses,EMI,01-01-2023,20000,2023
+Expenses,EMI,01-02-2023,20000,2023
+Expenses,EMI,01-03-2023,20000,2023
+Expenses,Food & Groceries,01-01-2018,15000,2018
+Expenses,Food & Groceries,01-02-2018,15000,2018
+Expenses,Food & Groceries,01-03-2018,15000,2018
+Expenses,Food & Groceries,01-04-2018,15000,2018
+Expenses,Food & Groceries,01-05-2018,15000,2018
+Expenses,Food & Groceries,01-06-2018,15000,2018
+Expenses,Food & Groceries,01-07-2018,15000,2018
+Expenses,Food & Groceries,01-08-2018,15000,2018
+Expenses,Food & Groceries,01-09-2018,15000,2018
+Expenses,Food & Groceries,01-10-2018,15000,2018
+Expenses,Food & Groceries,01-11-2018,15000,2018
+Expenses,Food & Groceries,01-12-2018,15000,2018
+Expenses,Food & Groceries,01-01-2019,17000,2019
+Expenses,Food & Groceries,01-02-2019,17000,2019
+Expenses,Food & Groceries,01-03-2019,17000,2019
+Expenses,Food & Groceries,01-04-2019,17000,2019
+Expenses,Food & Groceries,01-05-2019,17000,2019
+Expenses,Food & Groceries,01-06-2019,17000,2019
+Expenses,Food & Groceries,01-07-2019,17000,2019
+Expenses,Food & Groceries,01-08-2019,17000,2019
+Expenses,Food & Groceries,01-09-2019,17000,2019
+Expenses,Food & Groceries,01-10-2019,17000,2019
+Expenses,Food & Groceries,01-11-2019,17000,2019
+Expenses,Food & Groceries,01-12-2019,17000,2019
+Expenses,Food & Groceries,01-01-2020,13000,2020
+Expenses,Food & Groceries,01-02-2020,13000,2020
+Expenses,Food & Groceries,01-03-2020,13000,2020
+Expenses,Food & Groceries,01-04-2020,13000,2020
+Expenses,Food & Groceries,01-05-2020,13000,2020
+Expenses,Food & Groceries,01-06-2020,13000,2020
+Expenses,Food & Groceries,01-07-2020,13000,2020
+Expenses,Food & Groceries,01-08-2020,13000,2020
+Expenses,Food & Groceries,01-09-2020,12500,2020
+Expenses,Food & Groceries,01-10-2020,12500,2020
+Expenses,Food & Groceries,01-11-2020,12500,2020
+Expenses,Food & Groceries,01-12-2020,12500,2020
+Expenses,Food & Groceries,01-01-2021,12500,2021
+Expenses,Food & Groceries,01-02-2021,12500,2021
+Expenses,Food & Groceries,01-03-2021,15000,2021
+Expenses,Food & Groceries,01-04-2021,15000,2021
+Expenses,Food & Groceries,01-05-2021,15000,2021
+Expenses,Food & Groceries,01-06-2021,15000,2021
+Expenses,Food & Groceries,01-07-2021,15000,2021
+Expenses,Food & Groceries,01-08-2021,15000,2021
+Expenses,Food & Groceries,01-09-2021,15000,2021
+Expenses,Food & Groceries,01-10-2021,15000,2021
+Expenses,Food & Groceries,01-11-2021,15000,2021
+Expenses,Food & Groceries,01-12-2021,15000,2021
+Expenses,Food & Groceries,01-01-2022,10000,2022
+Expenses,Food & Groceries,01-02-2022,10000,2022
+Expenses,Food & Groceries,01-03-2022,10000,2022
+Expenses,Food & Groceries,01-04-2022,10000,2022
+Expenses,Food & Groceries,01-05-2022,10000,2022
+Expenses,Food & Groceries,01-06-2022,10000,2022
+Expenses,Food & Groceries,01-07-2022,10000,2022
+Expenses,Food & Groceries,01-08-2022,10000,2022
+Expenses,Food & Groceries,01-09-2022,10000,2022
+Expenses,Food & Groceries,01-10-2022,10000,2022
+Expenses,Food & Groceries,01-11-2022,13000,2022
+Expenses,Food & Groceries,01-12-2022,13000,2022
+Expenses,Food & Groceries,01-01-2023,13000,2023
+Expenses,Food & Groceries,01-02-2023,13000,2023
+Expenses,Food & Groceries,01-03-2023,14000,2023
+Expenses,Travel,01-01-2018,2500,2018
+Expenses,Travel,01-02-2018,2500,2018
+Expenses,Travel,01-03-2018,2500,2018
+Expenses,Travel,01-04-2018,2500,2018
+Expenses,Travel,01-05-2018,1000,2018
+Expenses,Travel,01-06-2018,1000,2018
+Expenses,Travel,01-07-2018,1500,2018
+Expenses,Travel,01-08-2018,2500,2018
+Expenses,Travel,01-09-2018,2500,2018
+Expenses,Travel,01-10-2018,2500,2018
+Expenses,Travel,01-11-2018,3500,2018
+Expenses,Travel,01-12-2018,3500,2018
+Expenses,Travel,01-01-2019,3500,2019
+Expenses,Travel,01-02-2019,3500,2019
+Expenses,Travel,01-03-2019,3500,2019
+Expenses,Travel,01-04-2019,3500,2019
+Expenses,Travel,01-05-2019,3500,2019
+Expenses,Travel,01-06-2019,2500,2019
+Expenses,Travel,01-07-2019,2500,2019
+Expenses,Travel,01-08-2019,2500,2019
+Expenses,Travel,01-09-2019,3500,2019
+Expenses,Travel,01-10-2019,3500,2019
+Expenses,Travel,01-11-2019,3500,2019
+Expenses,Travel,01-12-2019,3500,2019
+Expenses,Travel,01-01-2020,3500,2020
+Expenses,Travel,01-02-2020,3500,2020
+Expenses,Travel,01-03-2020,2500,2020
+Expenses,Travel,01-04-2020,2500,2020
+Expenses,Travel,01-05-2020,2500,2020
+Expenses,Travel,01-06-2020,2500,2020
+Expenses,Travel,01-07-2020,2500,2020
+Expenses,Travel,01-08-2020,2500,2020
+Expenses,Travel,01-09-2020,2500,2020
+Expenses,Travel,01-10-2020,3000,2020
+Expenses,Travel,01-11-2020,3000,2020
+Expenses,Travel,01-12-2020,3000,2020
+Expenses,Travel,01-01-2021,3000,2021
+Expenses,Travel,01-02-2021,3000,2021
+Expenses,Travel,01-03-2021,3000,2021
+Expenses,Travel,01-04-2021,3000,2021
+Expenses,Travel,01-05-2021,3000,2021
+Expenses,Travel,01-06-2021,3000,2021
+Expenses,Travel,01-07-2021,1500,2021
+Expenses,Travel,01-08-2021,1500,2021
+Expenses,Travel,01-09-2021,1500,2021
+Expenses,Travel,01-10-2021,1500,2021
+Expenses,Travel,01-11-2021,1500,2021
+Expenses,Travel,01-12-2021,1500,2021
+Expenses,Travel,01-01-2022,1500,2022
+Expenses,Travel,01-02-2022,2500,2022
+Expenses,Travel,01-03-2022,2500,2022
+Expenses,Travel,01-04-2022,2500,2022
+Expenses,Travel,01-05-2022,2500,2022
+Expenses,Travel,01-06-2022,3500,2022
+Expenses,Travel,01-07-2022,3500,2022
+Expenses,Travel,01-08-2022,3500,2022
+Expenses,Travel,01-09-2022,3500,2022
+Expenses,Travel,01-10-2022,3500,2022
+Expenses,Travel,01-11-2022,2500,2022
+Expenses,Travel,01-12-2022,1500,2022
+Expenses,Travel,01-01-2023,1500,2023
+Expenses,Travel,01-02-2023,1000,2023
+Expenses,Travel,01-03-2023,1000,2023
+Expenses,Insurance,01-01-2018,4000,2018
+Expenses,Insurance,01-02-2018,4000,2018
+Expenses,Insurance,01-03-2018,4000,2018
+Expenses,Insurance,01-04-2018,4000,2018
+Expenses,Insurance,01-05-2018,4000,2018
+Expenses,Insurance,01-06-2018,4000,2018
+Expenses,Insurance,01-07-2018,4000,2018
+Expenses,Insurance,01-08-2018,4000,2018
+Expenses,Insurance,01-09-2018,4000,2018
+Expenses,Insurance,01-10-2018,4000,2018
+Expenses,Insurance,01-11-2018,4000,2018
+Expenses,Insurance,01-12-2018,4000,2018
+Expenses,Insurance,01-01-2019,4000,2019
+Expenses,Insurance,01-02-2019,4000,2019
+Expenses,Insurance,01-03-2019,4000,2019
+Expenses,Insurance,01-04-2019,4000,2019
+Expenses,Insurance,01-05-2019,4000,2019
+Expenses,Insurance,01-06-2019,4000,2019
+Expenses,Insurance,01-07-2019,4000,2019
+Expenses,Insurance,01-08-2019,4000,2019
+Expenses,Insurance,01-09-2019,4000,2019
+Expenses,Insurance,01-10-2019,4000,2019
+Expenses,Insurance,01-11-2019,4000,2019
+Expenses,Insurance,01-12-2019,4000,2019
+Expenses,Insurance,01-01-2020,4000,2020
+Expenses,Insurance,01-02-2020,4000,2020
+Expenses,Insurance,01-03-2020,4000,2020
+Expenses,Insurance,01-04-2020,4000,2020
+Expenses,Insurance,01-05-2020,4000,2020
+Expenses,Insurance,01-06-2020,4000,2020
+Expenses,Insurance,01-07-2020,4000,2020
+Expenses,Insurance,01-08-2020,4000,2020
+Expenses,Insurance,01-09-2020,4000,2020
+Expenses,Insurance,01-10-2020,4000,2020
+Expenses,Insurance,01-11-2020,4000,2020
+Expenses,Insurance,01-12-2020,4000,2020
+Expenses,Insurance,01-01-2021,5500,2021
+Expenses,Insurance,01-02-2021,5500,2021
+Expenses,Insurance,01-03-2021,5500,2021
+Expenses,Insurance,01-04-2021,5500,2021
+Expenses,Insurance,01-05-2021,5500,2021
+Expenses,Insurance,01-06-2021,5500,2021
+Expenses,Insurance,01-07-2021,5500,2021
+Expenses,Insurance,01-08-2021,5500,2021
+Expenses,Insurance,01-09-2021,5500,2021
+Expenses,Insurance,01-10-2021,5500,2021
+Expenses,Insurance,01-11-2021,5500,2021
+Expenses,Insurance,01-12-2021,5500,2021
+Expenses,Insurance,01-01-2022,6000,2022
+Expenses,Insurance,01-02-2022,6000,2022
+Expenses,Insurance,01-03-2022,6000,2022
+Expenses,Insurance,01-04-2022,6000,2022
+Expenses,Insurance,01-05-2022,6000,2022
+Expenses,Insurance,01-06-2022,6000,2022
+Expenses,Insurance,01-07-2022,6000,2022
+Expenses,Insurance,01-08-2022,6000,2022
+Expenses,Insurance,01-09-2022,6000,2022
+Expenses,Insurance,01-10-2022,6000,2022
+Expenses,Insurance,01-11-2022,6000,2022
+Expenses,Insurance,01-12-2022,6000,2022
+Expenses,Insurance,01-01-2023,6000,2023
+Expenses,Insurance,01-02-2023,6000,2023
+Expenses,Insurance,01-03-2023,6000,2023
+Expenses,Bills,01-01-2018,3000,2018
+Expenses,Bills,01-02-2018,2500,2018
+Expenses,Bills,01-03-2018,2500,2018
+Expenses,Bills,01-04-2018,2500,2018
+Expenses,Bills,01-05-2018,3000,2018
+Expenses,Bills,01-06-2018,4000,2018
+Expenses,Bills,01-07-2018,3500,2018
+Expenses,Bills,01-08-2018,4000,2018
+Expenses,Bills,01-09-2018,3000,2018
+Expenses,Bills,01-10-2018,3000,2018
+Expenses,Bills,01-11-2018,2000,2018
+Expenses,Bills,01-12-2018,2000,2018
+Expenses,Bills,01-01-2019,2000,2019
+Expenses,Bills,01-02-2019,2000,2019
+Expenses,Bills,01-03-2019,2500,2019
+Expenses,Bills,01-04-2019,3000,2019
+Expenses,Bills,01-05-2019,3000,2019
+Expenses,Bills,01-06-2019,3000,2019
+Expenses,Bills,01-07-2019,3000,2019
+Expenses,Bills,01-08-2019,3500,2019
+Expenses,Bills,01-09-2019,3500,2019
+Expenses,Bills,01-10-2019,3500,2019
+Expenses,Bills,01-11-2019,1000,2019
+Expenses,Bills,01-12-2019,1000,2019
+Expenses,Bills,01-01-2020,1000,2020
+Expenses,Bills,01-02-2020,1500,2020
+Expenses,Bills,01-03-2020,2500,2020
+Expenses,Bills,01-04-2020,2500,2020
+Expenses,Bills,01-05-2020,2500,2020
+Expenses,Bills,01-06-2020,3000,2020
+Expenses,Bills,01-07-2020,3000,2020
+Expenses,Bills,01-08-2020,3000,2020
+Expenses,Bills,01-09-2020,3000,2020
+Expenses,Bills,01-10-2020,3500,2020
+Expenses,Bills,01-11-2020,3500,2020
+Expenses,Bills,01-12-2020,3500,2020
+Expenses,Bills,01-01-2021,3000,2021
+Expenses,Bills,01-02-2021,3000,2021
+Expenses,Bills,01-03-2021,3000,2021
+Expenses,Bills,01-04-2021,3000,2021
+Expenses,Bills,01-05-2021,3500,2021
+Expenses,Bills,01-06-2021,3500,2021
+Expenses,Bills,01-07-2021,3500,2021
+Expenses,Bills,01-08-2021,3000,2021
+Expenses,Bills,01-09-2021,4000,2021
+Expenses,Bills,01-10-2021,4000,2021
+Expenses,Bills,01-11-2021,4000,2021
+Expenses,Bills,01-12-2021,4000,2021
+Expenses,Bills,01-01-2022,4000,2022
+Expenses,Bills,01-02-2022,3000,2022
+Expenses,Bills,01-03-2022,3000,2022
+Expenses,Bills,01-04-2022,3000,2022
+Expenses,Bills,01-05-2022,2000,2022
+Expenses,Bills,01-06-2022,2000,2022
+Expenses,Bills,01-07-2022,2500,2022
+Expenses,Bills,01-08-2022,2500,2022
+Expenses,Bills,01-09-2022,3000,2022
+Expenses,Bills,01-10-2022,1000,2022
+Expenses,Bills,01-11-2022,2500,2022
+Expenses,Bills,01-12-2022,3000,2022
+Expenses,Bills,01-01-2023,3000,2023
+Expenses,Bills,01-02-2023,4000,2023
+Expenses,Bills,01-03-2023,3500,2023
+Savings,Bank Account,01-03-2018,90000,2018
+Savings,Bank Account,01-08-2018,80000,2018
+Savings,Bank Account,01-12-2018,90000,2018
+Savings,Bank Account,01-04-2019,2000000,2019
+Savings,Bank Account,01-12-2019,90000,2019
+Savings,Bank Account,01-05-2020,250000,2020
+Savings,Bank Account,01-11-2020,150000,2020
+Savings,Bank Account,01-02-2021,90000,2021
+Savings,Bank Account,01-09-2021,50000,2021
+Savings,Bank Account,01-01-2022,150000,2022
+Savings,Bank Account,01-06-2022,80000,2022
+Savings,FD,01-02-2020,300000,2020
+Savings,Stocks,01-01-2018,100000,2018
+Savings,Stocks,01-04-2018,50000,2018
+Savings,Stocks,01-09-2018,70000,2018
+Savings,Stocks,01-07-2019,100000,2019
+Savings,Stocks,01-10-2019,70000,2019
+Savings,Stocks,01-08-2020,50000,2020
+Savings,Stocks,01-06-2020,50000,2020
+Savings,Stocks,01-04-2021,200000,2021
+Savings,Stocks,01-12-2021,200000,2021
+Savings,Stocks,01-05-2022,150000,2022
+Savings,Stocks,01-10-2022,150000,2022
+Savings,Crypto,01-03-2022,15000,2022
+Savings,Crypto,01-11-2018,67000,2018
+Savings,Crypto,01-03-2019,60000,2019
+Savings,Crypto,01-01-2020,50000,2020
