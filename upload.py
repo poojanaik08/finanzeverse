@@ -108,6 +108,7 @@ def upload():
             )
             st.plotly_chart(fig)
 
+            st.markdown("###")
             st.subheader("How do I earn?")
             years1 = st.multiselect("Select Years: ", options=st.session_state.income_df["Year"].unique(), default=st.session_state.income_df["Year"].unique(),key="income_key")
             income_df_selection = st.session_state.income_df.query(
@@ -156,7 +157,7 @@ def upload():
                 x = "Date",
                 hover_data=["Value"],
                 height=600,
-                width= 690,
+                width= 685,
                 color="Component",
             )
             fig2.add_scatter(
