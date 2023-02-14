@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 
 def loanplanner():
-    st.title("Loan Planner")
+    st.title("Amortized Loan: Paying Back a Fixed Amount Periodically")
 
     # Function to calculate loan data
     # Calculate monthly interest rate
@@ -92,11 +92,48 @@ def loanplanner():
 
     figcol1, figcol2 = st.columns(2)
     with figcol1:
-        st.markdown('## Remaining principal over time')
+        st.markdown('### Remaining principal over time')
         st.plotly_chart(fig_remining_principal, theme=None)
     with figcol2:
-        st.markdown('## Monthly payment instalment over time')
+        st.markdown('### Monthly payment instalment over time')
         st.plotly_chart(fig_interest_payment_ratio, theme=None)
 
-    st.markdown('## Monyhly installment breakdown per month over time')
+    st.markdown('### Monyhly installment breakdown per month over time')
     st.plotly_chart(fig_interest_payed, theme=None, use_container_width=True)
+
+    st.markdown("###")
+    st.markdown("###")
+    st.header("Balloon Payment Loan: Paying Back a Lump Sum Due at Maturity")
+
+    with st.form(key="balloonLoan", clear_on_submit=True):
+        formcol1, formcol2 = st.columns(2)
+        with formcol1:
+            A = st.number_input("Loan Amount", format="%d", value=200000)
+            i = st.number_input("Interest Rate", format="%d", value=7)
+        
+        with formcol2:
+            n = st.number_input("Amortization period (in months)", format="%d", value=60)
+            nb = st.number_input("Balloon Payment After (in months)", format="%d", value=24)
+        
+        calculate = st.form_submit_button(label="Calculate")
+
+    #monthly payment
+    i = i / 100
+    i = i/12
+    pmt = (A * i * (1+i)**n) / ((1+i)**n - 1)
+
+    #balloon payment
+    B = (A * (1+i)**nb) - pmt / i * ((1+i)**nb - 1)
+
+    p = pmt*60 + B
+    p = round(p ,2)
+    total_monthly_pay = pmt*60
+    total_monthly_pay = round(total_monthly_pay,2)
+    pmt = round(pmt,2)
+    B = round(B, 2)
+    interest = p - A
+    interest = round(interest ,2)
+
+    if calculate:
+        st.markdown(f"#### Your fixed monthly payment is Rs. {pmt} in the first {nb/12} years, and then your last balloon payment will be Rs. {B}.")
+        st.markdown(f"#### Thus, your total repayment amount is Rs. {p}, from which the total monthly payment is Rs. {total_monthly_pay}, including a total interest payment of Rs. {interest}.")
