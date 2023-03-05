@@ -101,7 +101,7 @@ def loanplanner():
     st.markdown('### Monyhly installment breakdown per month over time')
     st.plotly_chart(fig_interest_payed, theme=None, use_container_width=True)
 
-    st.markdown("###")
+    st.markdown("###")  
     st.markdown("###")
     st.header("Balloon Payment Loan: Paying Back a Lump Sum Due at Maturity")
 
