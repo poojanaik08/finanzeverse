@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 
 from dashboard import dashboard
 from loanplanner import loanplanner
+from budgetplanner import budgetplanner
 
 def upload():
     # with open('style/upload.css') as f:
@@ -48,3 +49,6 @@ def upload():
         
     if choice == "Loan Planner":
         loanplanner()
+    
+    if choice == "Budget Planner":
+        budgetplanner()
