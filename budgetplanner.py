@@ -2,6 +2,7 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import streamlit.components.v1 as components
+import numpy as np
 
 def budgetplanner():
     total_income = st.session_state.income_df["Value"].sum()
@@ -30,6 +31,14 @@ def budgetplanner():
         <p style="font-size:30px;"><b>Total tax applicable is</b> <br>{tax}</p>
         </div>
         """, unsafe_allow_html=True)
+    # st.markdown("###")
+    # st.markdown("### Basic Tax Structure According to 2023")
+    # tax_data = pd.DataFrame(
+    #     data={"Investment":["5-Year Bank Fixed Deposit","Public Provident Fund (PPF)", "National Savings Certificate", "National Pension System (NPS)", "ELSS Funds","Unit Linked Insurance Plan (ULIP)","Sukanya Samriddhi Yojana (SSY)","Senior Citizen Saving Scheme (SCSS)"],
+    #     "Returns": ["6% to 7%", "7% to 8%", "7% to 8%", "12% to 14%", "	15% to 18%", "Varies with Plan Chosen","7.60%","7.40%"],
+    #     "Lock-in Period":["5 years", "15 years", "5 years", "Till Retirement", "3 years","5 years","N/A","5 years"],      
+    # })
+    # st.table(data=tax_data)
 	
     st.markdown("---")
     st.title("Calculate The CAGR")
