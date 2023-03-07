@@ -31,14 +31,7 @@ def budgetplanner():
         <p style="font-size:30px;"><b>Total tax applicable is</b> <br>{tax}</p>
         </div>
         """, unsafe_allow_html=True)
-    # st.markdown("###")
-    # st.markdown("### Basic Tax Structure According to 2023")
-    # tax_data = pd.DataFrame(
-    #     data={"Investment":["5-Year Bank Fixed Deposit","Public Provident Fund (PPF)", "National Savings Certificate", "National Pension System (NPS)", "ELSS Funds","Unit Linked Insurance Plan (ULIP)","Sukanya Samriddhi Yojana (SSY)","Senior Citizen Saving Scheme (SCSS)"],
-    #     "Returns": ["6% to 7%", "7% to 8%", "7% to 8%", "12% to 14%", "	15% to 18%", "Varies with Plan Chosen","7.60%","7.40%"],
-    #     "Lock-in Period":["5 years", "15 years", "5 years", "Till Retirement", "3 years","5 years","N/A","5 years"],      
-    # })
-    # st.table(data=tax_data)
+    
 	
     st.markdown("---")
     st.title("Calculate The CAGR")
@@ -66,23 +59,32 @@ def budgetplanner():
         fig1 = px.pie(
             df,
             values="y",names="x",
-        # data_frame= st.session_state.savings_df,
-            hole=0.55,
-            # labels = "Component",
-            # names= "Component",
+            hole=0.55, 
+            
             width=685
         )
 
         fig1.update_layout(
             paper_bgcolor='rgba(0,0,0,0)',
             plot_bgcolor='rgba(0,0,0,0)',
+
         )
         st.plotly_chart(fig1)
     
     st.markdown("---")
+    st.markdown("###")
+    st.title("Basic Tax Structure According to 2023")
+    tax_data = pd.DataFrame(
+        data={"Investment":["5-Year Bank Fixed Deposit","Public Provident Fund (PPF)", "National Savings Certificate", "National Pension System (NPS)", "ELSS Funds","Unit Linked Insurance Plan (ULIP)","Sukanya Samriddhi Yojana (SSY)","Senior Citizen Saving Scheme (SCSS)"],
+        "Returns": ["6% to 7%", "7% to 8%", "7% to 8%", "12% to 14%", "	15% to 18%", "Varies with Plan Chosen","7.60%","7.40%"],
+        "Lock-in Period":["5 years", "15 years", "5 years", "Till Retirement", "3 years","5 years","N/A","5 years"],      
+    })
+    st.markdown("###")
+    st.table(data=tax_data)
     sum = 0
-    home_loan_application = False
     st.title("Tax Deduction")
+    # taxcol1, taxcol2 = st.columns(2)
+    # with taxcol1:
     health_insurance_value = 0
     health_insurance = st.checkbox("Health Insurance")
     if health_insurance:
@@ -105,18 +107,17 @@ def budgetplanner():
 
     home_loan = st.checkbox("Home Loan")
     if home_loan:
-        home_loan_value = st.number_input(label="Enter Loan Amount:", format="%d", value=0, key="home_amount")
-        propertry_cost = st.number_input(label="Enter Cost of Property:", format="%d", value=0, key="property_cost")
         home_question = st.selectbox("Did own any property on the date of the sanctioned loan?", ["No", "Yes"])
         certificate_question = st.selectbox("Have you been provided interest certificate for the Loan by the Bank?", ["No", "Yes"])
+        home_loan_value = st.number_input(label="Enter Loan Amount:", format="%d", value=150000, key="home_amount")
+        propertry_cost = st.number_input(label="Enter Cost of Property:", format="%d", value=40000, key="property_cost")
         
-        principal_component = st.number_input(label="Enter Principal Component:", format="%d", value=0, key="principal_componet")
-        interest_component = st.number_input(label="Enter Interest Component:", format="%d", value=0, key="interest_component")
+        principal_component = st.number_input(label="Enter Principal Component:", format="%d", value=100000, key="principal_componet")
+        interest_component = st.number_input(label="Enter Interest Component:", format="%d", value=50000, key="interest_component")
         
 
         if(home_loan_value>3500000 or propertry_cost>5000000 or home_question=="Yes" or certificate_question=="No"):
             sum += 0
-            home_loan_application = False
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
         else:
             if(principal_component < 150000):
@@ -128,10 +129,7 @@ def budgetplanner():
             else:
                 interest = 200000
             sum+= principal + interest 
-
-            home_loan_application = True
-        
-
+#with taxcol2:
     home_rent = st.checkbox("Home Rent")
     if home_rent:
         home_rent_resident = st.selectbox("Are you residing in the rented property?", ["Yes", "No"], key="resident")
@@ -158,7 +156,7 @@ def budgetplanner():
                 st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
         else:
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
-        
+    
     student_loan = st.checkbox("Student Loan")
     if student_loan:
         student_certificate = st.selectbox("Do you have Education Loan Certificate provided by your Bank?", ["Yes", "No"])
@@ -211,28 +209,8 @@ def budgetplanner():
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
 
 
-    st.markdown(f"""<h4 style="padding:5px; background-color:#FF5733; width:300px; border-radius:5px">Tax: Deduction: {sum}</h4>""", unsafe_allow_html=True)
-
-
-# st.markdown("---")
-# col1, col2 = st.columns(2)
-# with col1:
-#     if(health_insurance):
-#         st.markdown(f"""
-#         <div style="padding:5px; background-color:purple; width:250px">
-#         <p>Health insurance something</p>
-#         </div>
-#         """, unsafe_allow_html=True)
-
-# with col2:
-#     if(home_loan and home_loan_application==True):
-#         st.markdown(f"""
-#         <div style="padding:5px; background-color:purple; width:250px">
-#         <p>Home Loan something</p>
-#         </div>
-#         """, unsafe_allow_html=True)
+    st.markdown(f"""<h4 style="padding:5px; background-color:#8753b8; width:300px; border-radius:5px">Tax: Deduction: {sum}</h4>""", unsafe_allow_html=True)
 	
-
 def calculate(amount, percent):
 	return (amount * percent) / 100
 
