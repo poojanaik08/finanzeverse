@@ -299,8 +299,6 @@ def budgetplanner():
             st.write("ELSS funds are equity funds that allow you to save tax while you invest for your long term goals. Investment in these funds can are eligible for deduction under Section 80c. These dual benefits mean anyone looking to invest up to Rs. 9,000 per month should only invest in this category.")
 
 
-
-
 def calculate(amount, percent):
 	return (amount * percent) / 100
 
