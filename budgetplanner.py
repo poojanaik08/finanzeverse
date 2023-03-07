@@ -81,18 +81,30 @@ def budgetplanner():
     })
     st.markdown("###")
     st.table(data=tax_data)
+
+    st.markdown("---")    
     sum = 0
-    st.title("Tax Deduction")
-    # taxcol1, taxcol2 = st.columns(2)
-    # with taxcol1:
+    st.header("Tax Deduction")
     health_insurance_value = 0
+
+    health_sum = 0
+    ecar_sum = 0
+    home_loan_sum = 0
+    home_rent_sum=0
+    student_sum = 0
+    interest_bank_sum = 0
+    disability_sum = 0
+    royalty_sum = 0 
+
     health_insurance = st.checkbox("Health Insurance")
     if health_insurance:
         health_insurance_value = st.number_input(label="Enter Value:", format="%d", value=0, key="health")
         if(health_insurance_value > 25000):
-            sum +=  25000
+            health_sum =  25000
         else:
-            sum += health_insurance_value
+            health_sum = health_insurance_value
+
+        sum += health_sum
 
     ecar_loan = st.checkbox("Electric Car Loan")
     if ecar_loan:
@@ -101,23 +113,22 @@ def budgetplanner():
         ecar_loan_period = st.selectbox("Is the loan sanctioned during the period starting from April 1, 2019, to March 31, 2023", ["Yes", "No"])
         ecar_loan_first = st.selectbox("Is this your first purchase of an electric vehicle", ["Yes", "No"])
         if(ecar_loan_owner=="Yes" and ecar_loan_period=="Yes" and ecar_loan_first=="Yes"):
-            sum += 150000
+            ecar_sum = 150000
         else:
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
+
+        sum += ecar_sum
 
     home_loan = st.checkbox("Home Loan")
     if home_loan:
         home_question = st.selectbox("Did own any property on the date of the sanctioned loan?", ["No", "Yes"])
-        certificate_question = st.selectbox("Have you been provided interest certificate for the Loan by the Bank?", ["No", "Yes"])
+        certificate_question = st.selectbox("Have you been provided interest certificate for the Loan by the Bank?", ["Yes", "No"])
         home_loan_value = st.number_input(label="Enter Loan Amount:", format="%d", value=150000, key="home_amount")
         propertry_cost = st.number_input(label="Enter Cost of Property:", format="%d", value=40000, key="property_cost")
-        
         principal_component = st.number_input(label="Enter Principal Component:", format="%d", value=100000, key="principal_componet")
         interest_component = st.number_input(label="Enter Interest Component:", format="%d", value=50000, key="interest_component")
-        
-
         if(home_loan_value>3500000 or propertry_cost>5000000 or home_question=="Yes" or certificate_question=="No"):
-            sum += 0
+            home_loan_sum = 0
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
         else:
             if(principal_component < 150000):
@@ -128,17 +139,18 @@ def budgetplanner():
                 interest = interest_component
             else:
                 interest = 200000
-            sum+= principal + interest 
-#with taxcol2:
+            
+            home_loan_sum = principal + interest 
+
+        sum += home_loan_sum
+
     home_rent = st.checkbox("Home Rent")
     if home_rent:
         home_rent_resident = st.selectbox("Are you residing in the rented property?", ["Yes", "No"], key="resident")
         home_rent_HRA = st.selectbox("Have you received home rent allowance from your employer?", ["No", "Yes"], key="home_hra")
         home_rent_value = st.number_input(label="Enter rent per annum:", format="%d", value=150000, key="rent")
         home_rent_income = st.number_input(label="Enter Income per annum:", format="%d", value=500000, key="income")
-        
         deduction1=60000
-
         rent= (home_rent_income*10)/100
         deduction2 = home_rent_value-rent
 
@@ -147,32 +159,38 @@ def budgetplanner():
         if(home_rent_resident == "Yes" and home_rent_HRA == "No"):
             if(deduction2>0 and deduction3>0):
                 if(deduction2 < 60000 and deduction2 < deduction3):
-                    sum += deduction2
+                    home_rent_sum = deduction2
                 elif(deduction3 < 60000 and deduction3 < deduction2):
-                    sum += deduction3
+                    home_rent_sum = deduction3
                 else:
-                    sum += deduction1
+                    home_rent_sum = deduction1
             else:
                 st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
         else:
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
-    
+        
+        sum += home_rent_sum
+
     student_loan = st.checkbox("Student Loan")
     if student_loan:
         student_certificate = st.selectbox("Do you have Education Loan Certificate provided by your Bank?", ["Yes", "No"])
         student_interest = st.number_input(label="Enter Interest Amount:", format="%d", value=0, key="student_interest")
         if(student_certificate=='Yes'):
-            sum += student_interest
+            student_sum = student_interest
         else:
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
+        
+        sum += student_sum
 
     interest_on_bank_acc = st.checkbox("Interest on Bank Account")
     if interest_on_bank_acc:
         interest_on_bank_acc_value = st.number_input(label="Enter Interest Income from Savings Bank Account:", format="%d", value=0, key="interest_on_bank_acc")
         if(interest_on_bank_acc_value<=10000):
-            sum += interest_on_bank_acc_value
+            interest_bank_sum = interest_on_bank_acc_value
         else:
-            sum += 10000
+            interest_bank_sum = 10000
+
+        sum += interest_bank_sum
 
     ddr = st.checkbox("Disability, Dependent, Relatives")
     if ddr:
@@ -181,35 +199,48 @@ def budgetplanner():
         if (ddr_certificate == 'Yes'):
             if(health_insurance):
                 if (level_disability>=80):
-                        sum += 125000 - health_insurance_value
-                elif ( level_disability>=40):
-                    sum += 75000 - health_insurance_value
+                    disability_sum = 125000 - health_insurance_value
+                elif (level_disability>=40):
+                    disability_sum = 75000 - health_insurance_value
                 else:
                     st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
             else:
                 if (level_disability>=80):
-                        sum += 125000 
-                elif ( level_disability>=40):
-                    sum += 75000 
+                    disability_sum = 125000 
+                elif (level_disability>=40):
+                    disability_sum = 75000 
                 else:
                     st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
         else:
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
-                        
+
+        sum += disability_sum
+
     royalty_income = st.checkbox("Royalty Income")
     if royalty_income:
         royalty_income_value = st.number_input(label="Enter Value:", format="%d", value=0, key="royalty_income")
         royalty_income_patent = st.selectbox("Is your patent registered under the Patent Act 1970?", ["Yes", "No"], key="patent")
         if(royalty_income_patent):
             if(royalty_income_value>=300000):
-                sum += 300000
+                royalty_sum = 300000
             else:
-                sum += royalty_income_value
+                royalty_sum = royalty_income_value
         else:
             st.markdown(f"""<p style="font-size:16px;color:red;margin-top:-15px;">*You are not eligible for any tax deduction</p>""", unsafe_allow_html=True)
 
+        sum += royalty_sum
 
     st.markdown(f"""<h4 style="padding:5px; background-color:#8753b8; width:300px; border-radius:5px">Tax: Deduction: {sum}</h4>""", unsafe_allow_html=True)
+
+    tax_deduction_data = {
+        "Category": ["Health Insurance", "Electric Car Loan", "Home Loan", "Home Rent", "Student Loan", 
+                    "Interest on Bank Account", "Disability, Dependent, Relatives", "Royalty Income", "Total"],
+        "Section": ["80D", "80EEB", "24, 80C, 80EE", "80GG", "80E", "80TTA", "80DD", "80RRB","-"],
+        "Amount Deducted": [health_sum, ecar_sum, home_loan_sum, home_rent_sum, student_sum, interest_bank_sum,
+                            disability_sum, royalty_sum, sum]
+    }
+    st.markdown("###")
+    st.table(tax_deduction_data)
 	
 def calculate(amount, percent):
 	return (amount * percent) / 100
