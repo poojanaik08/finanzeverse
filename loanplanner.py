@@ -85,8 +85,8 @@ def loanplanner():
 
         month_pay = round(data['Monthly Payment'][0])
         tot_amount = round(total_amount)
-        st.subheader(f'Monthly Installment: {month_pay}')
-        st.subheader(f'Total amount payed at the end of the loan period: {tot_amount}')
+        st.markdown(f'### Monthly Installment: <span style="color:#DA70D6">{month_pay}</span>', unsafe_allow_html=True)
+        st.markdown(f'### Total amount payed at the end of the loan period: <span style="color:#DA70D6">{tot_amount}</span>', unsafe_allow_html=True)
 
         show_brake_down = st.checkbox('Show loan breakdown per month')
         if show_brake_down:
@@ -95,6 +95,8 @@ def loanplanner():
             # create download button with streamlit, donload the data frame as csv file
             st.download_button(label='Download data', data=data.to_csv(index=False), file_name='loan_breakdown.csv',
                             mime='text/csv')
+            
+        st.markdown("---")
 
         figcol1, figcol2 = st.columns(2)
         with figcol1:
@@ -109,6 +111,8 @@ def loanplanner():
 
         st.markdown("###")  
         st.markdown("###")
+
+        st.markdown("---")
         st.header("Balloon Payment Loan: Paying Back a Lump Sum Due at Maturity")
 
         with st.form(key="balloonLoan", clear_on_submit=True):

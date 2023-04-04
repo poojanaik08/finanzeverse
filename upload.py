@@ -6,11 +6,12 @@ import plotly.graph_objects as go
 from dashboard import dashboard
 from loanplanner import loanplanner
 from budgetplanner import budgetplanner
+from movingAverages import moving_average
 
 def upload():
     # with open('style/upload.css') as f:
     #     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-    menu = ["File Upload","Dashboard", "Loan Planner", "Budget Planner"]
+    menu = ["File Upload","Dashboard", "Loan Planner", "Budget Planner", "Stock Market Trends"]
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "File Upload":
         data_file = st.file_uploader("Upload CSV", type=['csv'])
@@ -52,3 +53,6 @@ def upload():
     
     if choice == "Budget Planner":
         budgetplanner()
+
+    if choice == "Stock Market Trends":
+        moving_average()
