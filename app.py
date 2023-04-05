@@ -144,17 +144,6 @@ def main():
             st.markdown(new_title, unsafe_allow_html=True)
 
         st.write("---")
-
-        new_title = '<p style="font-family:Roboto; color:White; font-size: 48px; letter-spacing: 0.1em;text-align: center;top: 1000px;left: 363px; text-shadow: -1.5px 6px 4px rgba(0, 0, 0, 0.2);">So what are you waiting for!!!!!</p>'
-
-        st.markdown(new_title, unsafe_allow_html=True)
-
-        new_title = '<p style="font-family:Roboto; color:White; font-size: 38px; letter-spacing: 0.1em;text-align: center;top: 1000px;left: 363px;">Join us by clicking the button below</p>'
-        st.markdown(new_title, unsafe_allow_html=True)
-
-        button = '<button type="button" style="font-family:Roboto; color:B95AE7; font-size: 44px; letter-spacing: 0.12em;align-item:center;text-align: center;">Check Guidebook</button>'
-        st.markdown(button, unsafe_allow_html=True)
-
         st.image("images/Footer.png")
 
 
