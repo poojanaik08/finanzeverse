@@ -16,6 +16,10 @@ credentials:
       email: poojanaik21@gmail.com
       name: Pooja Naik
       password: $2b$12$Zgw8uuEdO3fY2DQvnzMnZeimtGwALIh/vVJMBB/4Hfe5xzc6h3uZm
+    tanvik:
+      email: tanvikurhade811@gmail.com
+      name: 'Tanvi '
+      password: $2b$12$WmOVB3/NesWoaWCUb0ehmOne3qkfrgmv3a.pkM9rgc9SOh1d0Uu.a
     tanvikurhade:
       email: tanvikurhade811@gmail.com
       name: Tanvi
