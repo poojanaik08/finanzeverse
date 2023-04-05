@@ -53,6 +53,11 @@ def main():
         st.write("---")
 
         st.image("images/page1.png")
+        st.image("images/page2.png")
+        st.image("images/page3.png")
+        st.image("images/page4.png")
+        st.image("images/page5.png")
+        st.image("images/page6.png")
 
         # new_title = '<p style="font-family:Roboto; color:White; font-size: 44px; letter-spacing: 0.1em;text-align: center;top: 1000px;left: 363px; text-shadow: -1.5px 6px 4px rgba(0, 0, 0, 0.2);">How you Deal With Your Finance ???</p>'
         # st.markdown(new_title, unsafe_allow_html=True)
