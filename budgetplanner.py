@@ -262,7 +262,10 @@ def budgetplanner():
                 card_container1 = st.container()
                 with card_container1:
                     #st.header("PPF")
+                    link = "http://www.nsiindia.gov.in/InternalPage.aspx?Id_Pk=55"
+                    text = "Click here to know more about PPF"
                     st.markdown("""<h2 style="color:#DA70D6;">PPF</h2>""",unsafe_allow_html=True)
+                    st.markdown(f"[{text}]({link})", unsafe_allow_html=True)
                     st.subheader("1.5 lakh")
                     st.write("The current PPF interest rate is 7.1% (Q4 of FY 2022-23), the minimum investment tenure is fixed at 15 years while the investment amount can range between Rs. 500 to Rs. 1.50 lakh in a financial year.")
 
@@ -270,7 +273,10 @@ def budgetplanner():
                 card_container2 = st.container()
                 with card_container2:
                     #st.header("National Pension System (NPS)")
+                    link1 = "https://www.india.gov.in/spotlight/national-pension-system-retirement-plan-all"
+                    text1 = "Click here to know more about NPS"
                     st.markdown("""<h2 style="color:#DA70D6;">National Pension System (NPS)</h2>""",unsafe_allow_html=True)
+                    st.markdown(f"[{text1}]({link1})", unsafe_allow_html=True)
                     st.subheader("2 lakh")
                     st.write("NPS account tax benefits extend up to ₹2,00,000 per annum for each individual. As an investor, investing this amount will make you eligible to claim ₹1,50,000 tax deduction under Section 80C and an additional ₹50,000 under Section 80CCD(1B).")
 
@@ -278,7 +284,10 @@ def budgetplanner():
                 card_container3 = st.container()
                 with card_container3:
                     #st.header("Sukanya Samriddhi")
+                    link2 = "https://www.india.gov.in/sukanya-samriddhi-yojna"
+                    text2 = "Click here to know more about Sukanya Samriddhi"
                     st.markdown("""<h2 style="color:#DA70D6;">Sukanya Samriddhi</h2>""",unsafe_allow_html=True)
+                    st.markdown(f"[{text2}]({link2})", unsafe_allow_html=True)
                     st.subheader("1.5 lakh")
                     st.write("The minimum annual contribution to the Sukanya Samriddhi Account is Rs. 250 and the maximum contribution is Rs. 1.5 lakh in a financial year. You have to invest at least the minimum amount every year for up to 15 years from the date of account opening.")
 
@@ -288,7 +297,10 @@ def budgetplanner():
                 card_container1 = st.container()
                 with card_container1:
                     #st.header("Tax-Saving FD")
+                    link3 = "https://sbi.co.in/web/yono/tax-saver-fixed-deposit"
+                    text3 = "Click here to know more about Tax-Saving FD"
                     st.markdown("""<h2 style="color:#DA70D6;">Tax-Saving FD</h2>""",unsafe_allow_html=True)
+                    st.markdown(f"[{text3}]({link3})", unsafe_allow_html=True)
                     st.subheader("1.5 lakh")
                     st.write("A 5-year term deposit is also called a Tax-Saving FD. If you invest in one, you are eligible for tax deductions under Section 80C of the Income Tax Act, 1961. You can claim up to a maximum of Rs.1.5 lakh.")
 
@@ -296,7 +308,10 @@ def budgetplanner():
                 card_container2 = st.container()
                 with card_container2:
                     #st.header("A Senior Citizens’ Saving Scheme (SCSS)")
+                    link4 = "http://www.nsiindia.gov.in/InternalPage.aspx?Id_Pk=62"
+                    text4 = "Click here to know more about SCSS"
                     st.markdown("""<h2 style="color:#DA70D6;">A Senior Citizens’ Saving Scheme (SCSS)</h2>""",unsafe_allow_html=True)
+                    st.markdown(f"[{text4}]({link4})", unsafe_allow_html=True)
                     st.subheader("1.08 lakh")
                     st.write("A Senior Citizens’ Saving Scheme (SCSS) is a government-backed retirement benefits programme. Senior citizens resident in India can invest a lump sum in the scheme, Get an income tax deduction of up to Rs.1.5 lakh under Section 80C of the Indian Tax Act, 1961.")
 
@@ -304,7 +319,10 @@ def budgetplanner():
                 card_container3 = st.container()
                 with card_container3:
                     #st.header("ELSS")
+                    link5 = "https://www.sbimf.com/campaign/elss-tax-saving-mutual-fund/#:~:text=ELSS%20or%20tax%20saving%20mutual,of%20upto%20Rs%201.5%20lakh."
+                    text5 = "Click here to know more about ELSS"
                     st.markdown("""<h2 style="color:#DA70D6;">ELSS</h2>""",unsafe_allow_html=True)
+                    st.markdown(f"[{text5}]({link5})", unsafe_allow_html=True)
                     st.subheader("1.08 lakh")
                     st.write("ELSS funds are equity funds that allow you to save tax while you invest for your long term goals. Investment in these funds can are eligible for deduction under Section 80c. These dual benefits mean anyone looking to invest up to Rs. 9,000 per month should only invest in this category.")
         
@@ -353,7 +371,7 @@ def budgetplanner():
             budget = regressor.predict([[next_year]]) + 6.35
 
             # Display the budget recommendation to the user
-            st.markdown(f"""### Based on your selection, we recommend a budget of Rs. <span style='color:#DA70D6;'>{round(budget[0], 2)}</span> for the next year""", unsafe_allow_html=True)
+            st.markdown(f"""### Based on your selection, we recommend a monthly budget of Rs. <span style='color:#DA70D6;'>{round(budget[0], 2)}</span> for the next year""", unsafe_allow_html=True)
 
             # Calculate the accuracy of the model
             y_pred = regressor.predict(X_test)

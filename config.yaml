@@ -24,5 +24,9 @@ credentials:
       email: tanvikurhade811@gmail.com
       name: Tanvi
       password: $2b$12$HocW0DKHGoj1BtikegFHh.3ORe1/NsSz28VOsXqGoBr2b85Z/vMNW
+    tanvikurhade_:
+      email: kurhadetanvi@gmail.com
+      name: Tanvi Kurhade
+      password: $2b$12$xI7A7.VBXrmcydLx5zlqEeXP6hEENxlsvUVJF1NjhoBpPFNDByjZy
 preauthorized:
   emails: []
