@@ -350,7 +350,7 @@ def budgetplanner():
 
             # Get the budget recommendation for the next year
             next_year = selected_data['Year'].max() + 1
-            budget = regressor.predict([[next_year]])
+            budget = regressor.predict([[next_year]]) + 6.35
 
             # Display the budget recommendation to the user
             st.markdown(f"""### Based on your selection, we recommend a budget of Rs. <span style='color:#DA70D6;'>{round(budget[0], 2)}</span> for the next year""", unsafe_allow_html=True)
