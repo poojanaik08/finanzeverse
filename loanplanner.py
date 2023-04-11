@@ -187,13 +187,16 @@ def loanplanner():
         cred = st.selectbox("CIBIL Score",cred_options, format_func=lambda x: cred_display[x])
 
         ## Applicant Monthly Income
-        mon_income = st.number_input("Applicant's Income",value=0)
+        mon_income_rup = st.number_input("Applicant's Income",value=0)
+        mon_income = mon_income_rup / 84.15
 
         ## Co-Applicant Monthly Income
-        co_mon_income = st.number_input("Co-Applicant's Income",value=0)
+        co_mon_income_rup = st.number_input("Co-Applicant's Income",value=0)
+        co_mon_income = co_mon_income_rup /84.15
 
         ## Loan AMount
-        loan_amt = st.number_input("Loan Amount",value=0)
+        loan_amt_rup = st.number_input("Loan Amount",value=0)
+        loan_amt = loan_amt_rup / 84.15
 
         ## loan duration
         dur_display = ['2 Month','6 Month','8 Month','1 Year','16 Month']
